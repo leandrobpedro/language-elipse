@@ -1,0 +1,31 @@
+name: 'Elipse'
+scopeName: 'source.elipse'
+fileTypes: [
+  'elipse'
+]
+
+patterns: [
+  {
+    include: 'source.vbs'
+  }
+  {
+    name: 'support.function.application.elipse'
+    match: '(?i:\\b((?<=\\S\\.)(AckA(llAlarms|rea)|C(aptureScreen|hangePassword|ontext|reateLink)|D(e(activate|leteObject)|oModal)|E(Sign|xecuteExternalApp|xit)|Get(ChildObject|Formula(Unit|Value)DataObj|F(rame|ullUserName)|KeyPad|Mouse(X|Y)|Object|PowerExplorer|Screen|Value)|I(s(AppRunning|UserMemberOfGroup|WebViewer)|tem)|Lo(ad(Formula(Dlg|Values(|Quiet))|Report)|g(in(|User)|out)|gTrackingEvent)|P(asswordConfirm|laysound)|RemoveLink|S(ave|e(lectMenu|t(DBParameters|Value))|how((Date|File)Picker|P(ickColor|owerExplorer)|topsound))|T(oggleValue|rackEvent)|UserAdministration|Write(|Ex)))\\b)'
+  }
+  {
+    name: 'support.function.e3globals.elipse'
+    match: '(?i:\\b(BS(hl|hr)|Choose|E3Format|Get(Bit|C(omputerName|urrentWindowsUserName)|LocalTime(|UTC))|IIf|Links|OPC(Get(Limit|Quality|SubStatus|Vendor)|Is(Bad|Good|Uncertain)|MakeQuality|Set(Limit|Quality|SubStatus|Vendor))|S(etBit|ourceTypeName))\\b)'
+  }
+  {
+    name: 'support.function.elipse'
+    match: '(?i:\\b(A(boutBox|c(k(All|CurrentFilter|Selected)|tiv(ate|e((|(High|Low|Med|)(NACK|))Alarms))|dd(Item|Object))|larmCount)|BringToFront|C(l(ear(Fields|PenMarks)|ose)|o(ntext|pyConfig))|De(activate|elete(Object|Unbound(All|CurrentFilter|Selected)))|F(it(All|Pen)|romPixel(X|Y))|Get(ColumnValue|ChildObject|EventByIndex|FocusedEvent)|Item|LoadData|Re(query|setConfig|trieveE3QueryFields)|S(e(tFocus|ndToBack)|howCursors)|ToPixel(X|Y)|Zoom(In|Out))\\b)'
+  }
+  {
+    name: 'support.variable.elipse'
+    match: '(?i:\\b(PathName)\\b)'
+  }
+  {
+    name: 'variable.language.elipse'
+    match: '(?i:(\\b(Application|Screen)\\b))'
+  }
+]

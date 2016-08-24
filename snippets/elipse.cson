@@ -1,0 +1,74 @@
+# Elipse E3/Power snippets.
+'.source.elipse':
+  'Add Object':
+    'prefix': 'addobject'
+    'body': '${1:Application.GetObject("$2")}.AddObject("${3:ClassName}", ${4:Activate}, ${5:ObjectName})$0'
+  'DoModal':
+    'prefix': 'domodal'
+    'body': 'Application.DoModal "${1:Screen}", "${2:Title}", ${3:Left}, ${4:Top}, ${5:Width}, ${6:Height}, ${7:Arg}, ${8:Flags}$0'
+  'For...Each':
+    'prefix': 'fore'
+    'body': 'For Each ${1:Obj} In ${2:target}\n\t${3:\' Statments...}\nNext$0'
+  'For...Next':
+    'prefix': 'for'
+    'body': 'For ${1:i} = ${2:1} To ${3:9}\n\t${4:\' Statments...}\nNext$0'
+  'Function':
+    'prefix': 'function'
+    'body': 'Function ${1:Foo}($2)\n\t${3:\' Code...}\n\t${1:Foo} = ${4:retval}\nEnd Function$0'
+  'If Condition Exit Sub':
+    'prefix': 'ifexit'
+    'body': 'If (${1:True}) Then Exit Sub$0'
+  'If Condition':
+    'prefix': 'if'
+    'body': 'If (${1:True}) Then\n\t${2:\' Statments...}\nEnd If$0'
+  'If Else Condition':
+    'prefix': 'ife'
+    'body': 'If (${1:True}) Then\n\t${2:\' Statments...}\nElse\n\t${3:\' Else statments...}\nEnd If$0'
+  'If ElseIf Condition':
+    'prefix': 'ifei'
+    'body': 'If (${1:True}) Then\n\t${2:\' Statments...}\nElseIf (${3:False}) Then\n\t${4:\' Else if statments...}\nElse\n\t${5:\' Else statments...}\nEnd If$0'
+  'IIf':
+    'prefix': 'iif'
+    'body': 'IIf(${1:Condition}, ${2:ExprTrue}, ${3:ExprFalse})$0'
+  'File System Object':
+    'prefix': 'fso'
+    'body': 'Set ${1:Fso} = CreateObject("Scripting.FileSystemObject")$0'
+  'Load report':
+    'prefix': 'loadreport'
+    'body': 'Set ${1:Report} = Application.LoadReport("$2")$0'
+  'MsgBox':
+    'prefix': 'msgbox'
+    'body': 'MsgBox "${1:prompt}"${2:, ${3:buttons}, "${4:title}"${5:, ${6:helpfile}, ${7:context}}}${0}'
+  'On Error':
+    'prefix': 'onerr'
+    'body': 'On Error Resume Next$0'
+  'OpenScreen':
+    'prefix': 'open'
+    'body': 'Application.GetFrame("$1").OpenScreen("$2"), 0$0'
+  'RGB':
+    'prefix': 'rgb'
+    'body': 'RGB(${1:red}, ${2:blue}, ${3:green})$0'
+  'Select Case':
+    'prefix': 'select'
+    'body': 'Select Case ${1:testexpression}\n\tCase ${2:expressionlist}\n\t\t${3:\' Statements.}\n\tCase Else\n\t\t${4:\' Else statements.}\nEnd Select$0'
+  'Show Date Picker':
+    'prefix': 'showdatepicker'
+    'body': 'Application.ShowDatePicker(${1:DateValue}, ${2:Left}, ${3:Top}, ${4:DefaultDate})$0'
+  'Show Pick Color':
+    'prefix': 'showpickcolor'
+    'body': 'Application.ShowPickColor(${1:ColorValue}, ${2:Color}, ${3:Left}, ${4:Top})$0'
+  'Sub':
+    'prefix': 'sub'
+    'body': 'Sub ${1:Foo}($2)\n\t${3:\' Code...}\nEnd Sub$0'
+  'Trace':
+    'prefix': 'trace'
+    'body': 'Application.Trace "$1"$0'
+  'Todo':
+    'prefix': 'todo'
+    'body': '\' TODO: $0'
+  'With':
+    'prefix': 'with'
+    'body': 'With ${1:Obj}\n\t${2:\' Statements}\nEnd With$0'
+  'WshShell':
+    'prefix': 'wsh'
+    'body': 'Set ${1:WshShell} = CreateObject("WScript.Shell")$0'

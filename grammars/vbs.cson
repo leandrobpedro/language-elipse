@@ -1,0 +1,63 @@
+# name: 'VBScript'
+scopeName: 'source.vbs'
+fileTypes: [
+  'vbs'
+]
+patterns: [
+  {
+    name: 'comment.line.vbs'
+    match: '(\'|(?i:Rem)).*$\\n?'
+  }
+  {
+    name: 'constant.language.vbs'
+    match: '(?i:(\\b(False|True|Nothing|vb(A(bort(|RetryIgnore)|pplicationModal|rray)|B(inaryCompare|l(ack|ue)|oolean|yte)|C(ancel|r(|itical|Lf)|urrency|yan)|D(at(abaseCompare|aObject|e)|e(cimal|faultButton(1|2|3|4))|ouble)|E(mpty|rror|xclamation)|F(alse|irst(FourDays|FullWeek|Jan1)|ormFeed|riday)|G(eneralDate|reen)|I(gnore|n(formation|teger))|L(f|ong(|Date|Time))|M(agenta|onday|sgBox(HelpButton|Right|RtlReading|SetForeground))|N(ewLine|o|ull(|Char|String))|O(bject(|Error)|K(|Cancel|Only))|Question|Re(d|try(|Cancel))|S(aturday|hort(Date|Time)|ingle|tring|unday|ystemModal)|T(ab|extCompare|hursday|rue|uesday)|Use(Default|System(|DayOfWeek))|V(ariant|erticalTab)|W(ednesday|hite)|Y(e(llow|s(|(No(|Cancel))))))))\\b)'
+  }
+  {
+    name: 'constant.numeric.vbs'
+    match: '((&(h|H)[0-9a-fA-F]{,2})|\\b(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))((e|E)(\\+|-)?[0-9]+)?)\\b'
+  }
+  {
+    name: 'keyword.control.vbs'
+    match: '(?i:(\\b(And|C(a(ll|se)|lass|onst)|D(im|o)|E(ach|l(se|seIf)|qv|rror|xplicit)|I(f|mp|n|s)|For|Get|L(et|oop)|N(e(xt|w)|ot)|O(n|ption|r)|P(r(ivate|operty)|ublic)|Re(Dim|sume)|S(e(t|lect)|top)|T(hen|o)|Until|Xor|W(end|ith|hile))\\b))|(&)'
+  }
+  {
+    name: 'keyword.operator.vbs'
+    match: '(=|<>|>|<|>=|<=)'
+  }
+  {
+    name: 'meta.function.vbs'
+    match: '^\\s*((?i:Function|Sub))\\s*([a-zA-Z_]\\w*)\\s*(\\()([^)]*)(\\)).*\\n?'
+    captures:
+      '1':
+        name: 'storage.type.function.vbs'
+      '2':
+        name: 'entity.name.function.vbs'
+      '3':
+        name: 'punctuation.definition.parameters.vbs'
+      '4':
+        name: 'variable.parameter.function.vbs'
+      '5':
+        name: 'punctuation.definition.parameters.vbs'
+  }
+  {
+    name: 'storage.type.vbs'
+    match: '(?i:(\\b(E(nd|xit)\\s)(Function|Sub|)\\b))'
+  }
+  {
+    name: 'string.quoted.double.vbs'
+    begin: '\"'
+    end: '\"|\n|\r'
+  }
+  {
+    name: 'support.function.application.vbs'
+    match: '(?i:\\b(?<=\\S\\.)(Clear|Description|Execute|FirstIndex|Global|Help(Context|File)|IgnoreCase|Length|Number|Pattern|R(aise|eplace)|S(ource|ubMatches)|Test|Value|Write(Line|))\\b)'
+  }
+  {
+    name: 'support.function.vbs'
+    match: '(?i:\\b(A(bs|rray|sc(|B|W)|tn)|C(B(ool|yte)|Cur|D(ate|bl)|hr(|B|W)|Int|Lng|os|reateObject|S(ng|tr))|Da(te(|Add|Diff|Part|Serial|Value)|y)|E(rase|scape|val|xecute(|Global)|xp)|F(i(lter|x)|ormat(Currency|DateTime|Number|Percent))|Get(Object|Locale|Ref)|H(ex|our)|I(n(putBox|Str(|B|Rev)|t)|s(Array|Date|Empty|Nu(ll|meric)|Object))|Join|L(Bound|Case|e(ft(|B)|n(|B))|o(adPicture|g)|Trim)|M(i(d(|B)|nute)|onth(|Name)|sgBox)|Now|Oct|R(andomize|eplace|GB|ight(|B)|nd|ound|Trim)|S(criptEngine(|(Build|Major|Minor)Version)|e(cond|tLocale)|gn|in|p(ace|lit)|qr|tr(Comp|ing|Reverse))|T(an|ime(|r|Serial|Value)|rim|ypeName)|U(Bound|Case|nescape)|VarType|Weekday(|Name)|Year)\\b)'
+  }
+  {
+    # name: 'variable.parameter.function.vbs'
+    # match: '\\b(ByVal)\\b'
+  }
+]

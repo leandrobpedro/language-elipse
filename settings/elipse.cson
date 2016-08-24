@@ -1,0 +1,6 @@
+'.source.elipse':
+  'editor':
+    'commentStart': '\' '
+    'showInvisibles': false
+    'softWrap': false
+    'tabLength': 4
