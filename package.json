@@ -1,6 +1,6 @@
 {
   "name": "language-elipse",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Atom language support for Elipse E3 and Elipse Power",
   "keywords": [
     "e3",
