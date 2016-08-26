@@ -6,7 +6,7 @@ fileTypes: [
 patterns: [
   {
     name: 'comment.line.vbs'
-    match: '(\'|(?i:Rem)).*$\\n?'
+    match: '(\'|(?i:\\bRem\\b)).*$\\n?'
   }
   {
     name: 'constant.language.vbs'
@@ -18,7 +18,7 @@ patterns: [
   }
   {
     name: 'keyword.control.vbs'
-    match: '(?i:(\\b(And|C(a(ll|se)|lass|onst)|D(im|o)|E(ach|l(se|seIf)|qv|rror|xplicit)|I(f|mp|n|s)|For|Get|L(et|oop)|N(e(xt|w)|ot)|O(n|ption|r)|P(r(ivate|operty)|ublic)|Re(Dim|sume)|S(e(t|lect)|top)|T(hen|o)|Until|Xor|W(end|ith|hile))\\b))|(&)'
+    match: '(?i:(\\b(And|C(a(ll|se)|lass|onst)|D(im|o)|E(ach|l(se|seIf)|qv|rror|xplicit)|I(f|mp|n|s)|For|Get|L(et|oop)|N(e(xt|w)|ot)|O(n|ption|r)|P(r(ivate|operty)|ublic)|Re(Dim|sume)|S(e(t|lect)|t(ep|op))|T(hen|o)|Until|Xor|W(end|ith|hile))\\b))|(&)'
   }
   {
     name: 'keyword.operator.vbs'
